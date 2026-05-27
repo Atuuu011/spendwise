@@ -130,16 +130,6 @@
     "__v": 0
   },
   {
-    "_id": "6a1693b16a54810a67932973",
-    "user": "6a1693b06a54810a67932971",
-    "action": "REGISTER",
-    "details": "New account created",
-    "ipAddress": "::1",
-    "createdAt": "2026-05-27T06:48:17.072Z",
-    "updatedAt": "2026-05-27T06:48:17.072Z",
-    "__v": 0
-  },
-  {
     "_id": "6a16bb1f16a6edc2f0fac453",
     "user": "6a165c0dddcd17b11543f02a",
     "action": "LOGIN",
@@ -197,6 +187,56 @@
     "ipAddress": "::1",
     "createdAt": "2026-05-27T10:09:58.464Z",
     "updatedAt": "2026-05-27T10:09:58.464Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16d565dedb3192492fedd0",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGIN",
+    "details": "User logged in",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T11:28:37.044Z",
+    "updatedAt": "2026-05-27T11:28:37.044Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16d5ebdedb3192492fedd9",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGIN",
+    "details": "User logged in",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T11:30:51.129Z",
+    "updatedAt": "2026-05-27T11:30:51.129Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16d73ededb3192492fedfe",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGIN",
+    "details": "User logged in",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T11:36:30.539Z",
+    "updatedAt": "2026-05-27T11:36:30.539Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16d906dedb3192492fee0d",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGOUT",
+    "details": "User logged out",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T11:44:06.234Z",
+    "updatedAt": "2026-05-27T11:44:06.234Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16d911dedb3192492fee10",
+    "user": "6a16d8b1a9f457aed3d435a4",
+    "action": "LOGIN",
+    "details": "User logged in",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T11:44:17.539Z",
+    "updatedAt": "2026-05-27T11:44:17.539Z",
     "__v": 0
   }
 ]
