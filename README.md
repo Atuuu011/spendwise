@@ -16,10 +16,15 @@ For administrators (e.g. a household lead or a small team), SpendWise also provi
 - **Backend API:** https://spendwise-e6x4.onrender.com
 
 ### Test Credentials
-- **Email:** test@test.com
-- **Password:** 123456
 
-> The test user has admin role enabled, so you can also explore admin features (`/admin/users`, `/admin/activities`).
+We provide two seeded accounts so you can clearly see the role-based access control in action.
+
+| Role | Email | Password | Demonstrates |
+|------|-------|----------|--------------|
+| Regular User | `test@test.com` | `123456` | Standard user flow — dashboard, expenses, search |
+| Admin User | `admin@test.com` | `admin123` | Admin-only routes — user management, activity log |
+
+The admin account is created by running `npm run seed-admin` from the `backend/` folder (see the [Admin Seeding](#️-admin-seeding) section below).
 
 ## ✨ Features
 
@@ -96,8 +101,10 @@ spendwise/
 │   │   └── activityRoutes.js
 │   ├── utils/                 # Helpers
 │   │   └── generateToken.js           # JWT signer
-│   ├── scripts/               # One-off scripts
-│   │   └── exportDb.js                # dumps all collections to JSON
+│   ├── scripts/               # Standalone admin/dev scripts
+│   │   ├── exportDb.js                # dumps all collections to JSON
+│   │   ├── seedAdmin.js               # creates the demo admin user
+│   │   └── promoteAdmin.js            # promotes an existing user to admin
 │   ├── database-export/       # Submission database export (JSON)
 │   │   ├── users.json
 │   │   ├── expenses.json
@@ -210,6 +217,30 @@ npm run export-db
 ```
 
 The script lives in `backend/scripts/exportDb.js` and uses the same `MONGO_URI` from your `.env`.
+
+## 🛡️ Admin Seeding
+
+The repo ships with a one-shot script that creates the demo admin user (or promotes them if they already exist). Run from the `backend/` folder:
+
+```bash
+npm run seed-admin
+```
+
+This creates:
+- **Name:** Admin User
+- **Email:** admin@test.com
+- **Password:** admin123
+- **Role:** admin
+
+The script is **idempotent** — running it twice is safe. If the user already exists with the `admin` role, it does nothing. If the user exists but is a regular user, it promotes them.
+
+To promote any other existing user to admin instead:
+
+```bash
+npm run promote-admin -- their.email@example.com
+```
+
+Both scripts live in `backend/scripts/` and use the same `MONGO_URI` from your `.env`.
 
 ## 📡 API Endpoints
 
