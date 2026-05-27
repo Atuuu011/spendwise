@@ -1,7 +1,7 @@
 // Expenses page - full CRUD with live search
 
 import { useEffect, useState } from 'react';
-import { Plus, Edit2, Trash2, Receipt } from 'lucide-react';
+import { Plus, Edit2, Trash2, Receipt, AlertTriangle } from 'lucide-react';
 import toast from 'react-hot-toast';
 import Navbar from '../components/Navbar';
 import SearchBar from '../components/SearchBar';
@@ -19,6 +19,8 @@ const Expenses = () => {
   const debouncedSearch = useDebounce(search, 300); // wait 300ms after typing stops
   const [modalOpen, setModalOpen] = useState(false);
   const [editingExpense, setEditingExpense] = useState(null);
+  const [deleteTarget, setDeleteTarget] = useState(null); // expense to confirm delete
+  const [deleting, setDeleting] = useState(false);
 
   // Fetch expenses whenever debounced search changes
   useEffect(() => {
@@ -64,16 +66,28 @@ const Expenses = () => {
     }
   };
 
-  const handleDelete = async (id) => {
-    if (!window.confirm('Delete this expense? This cannot be undone.')) return;
+  // Open delete confirmation modal (replaces ugly window.confirm)
+  const requestDelete = (expense) => {
+    setDeleteTarget(expense);
+  };
+
+  // Confirmed delete from the modal
+  const confirmDelete = async () => {
+    if (!deleteTarget) return;
+    setDeleting(true);
     try {
-      await api.delete(`/expenses/${id}`);
+      await api.delete(`/expenses/${deleteTarget._id}`);
       toast.success('Expense deleted');
+      setDeleteTarget(null);
       fetchExpenses();
     } catch (err) {
       toast.error(err.response?.data?.message || 'Failed to delete');
+    } finally {
+      setDeleting(false);
     }
   };
+
+  const cancelDelete = () => setDeleteTarget(null);
 
   const openCreateModal = () => {
     setEditingExpense(null);
@@ -168,7 +182,7 @@ const Expenses = () => {
                       <Edit2 className="w-4 h-4" />
                     </button>
                     <button
-                      onClick={() => handleDelete(exp._id)}
+                      onClick={() => requestDelete(exp)}
                       className="p-2 text-slate-400 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-all"
                       title="Delete"
                     >
@@ -199,6 +213,56 @@ const Expenses = () => {
           onSubmit={editingExpense ? handleUpdate : handleCreate}
           onCancel={closeModal}
         />
+      </Modal>
+
+      {/* Delete confirmation modal — replaces window.confirm */}
+      <Modal
+        isOpen={!!deleteTarget}
+        onClose={cancelDelete}
+        title="Delete Expense?"
+      >
+        <div className="space-y-4">
+          <div className="flex items-start gap-3 p-4 rounded-xl bg-red-500/10 border border-red-500/30">
+            <AlertTriangle className="w-6 h-6 text-red-400 flex-shrink-0 mt-0.5" />
+            <div className="text-sm text-slate-300">
+              <p className="font-medium text-white mb-1">This cannot be undone.</p>
+              {deleteTarget && (
+                <p>
+                  You're about to delete{' '}
+                  <span className="text-white font-semibold">"{deleteTarget.title}"</span> (
+                  {formatCurrency(deleteTarget.amount)}).
+                </p>
+              )}
+            </div>
+          </div>
+
+          <div className="flex gap-3 pt-2">
+            <button
+              onClick={cancelDelete}
+              disabled={deleting}
+              className="btn-secondary flex-1"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={confirmDelete}
+              disabled={deleting}
+              className="btn-danger flex-1 flex items-center justify-center gap-2"
+            >
+              {deleting ? (
+                <>
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  Deleting...
+                </>
+              ) : (
+                <>
+                  <Trash2 className="w-4 h-4" />
+                  Delete
+                </>
+              )}
+            </button>
+          </div>
+        </div>
       </Modal>
     </div>
   );
