@@ -9,6 +9,10 @@ A modern full-stack expense tracker built with the MERN stack featuring JWT auth
 - **Frontend:** *live frontend url:- https://spendwise-git-main-atharva-s-projects15.vercel.app/login*
 - **Backend API:** *live backend url:- https://spendwise-e6x4.onrender.com*
 
+## Test Credentials
+- Email.com: test@test.com
+- Password: 123456
+
 ## ✨ Features
 
 ### 👤 User Features
