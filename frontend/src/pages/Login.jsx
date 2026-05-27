@@ -23,8 +23,8 @@ const Login = () => {
     }
     setLoading(true);
     try {
-      await login(formData.email, formData.password);
-      toast.success('Welcome back! 🎉');
+      const user = await login(formData.email, formData.password);
+      toast.success(`Welcome back, ${user?.name || 'friend'}! 🎉`);
       navigate('/dashboard');
     } catch (err) {
       toast.error(err.response?.data?.message || 'Login failed');
