@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard';
 import Expenses from './pages/Expenses';
 import AdminUsers from './pages/AdminUsers';
 import AdminActivities from './pages/AdminActivities';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -72,8 +73,8 @@ function App() {
             }
           />
 
-          {/* Catch-all */}
-          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+          {/* 404 - catch-all for any unknown URL */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
