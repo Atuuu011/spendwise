@@ -1,6 +1,15 @@
 # 👥 Workload Allocation — SpendWise
 
-Project members: **Atharva Shejwal** and **Vikas**
+Project members: **Atharva Shejwal** and **Vikas Ramesh**
+
+---
+
+## 👥 Team Members
+
+| Name | Student ID | GitHub Username | Email |
+|------|-----------|-----------------|-------|
+| Atharva Shejwal | [26156923] | [Atuuu011](https://github.com/Atuuu011) | atharvashejwal11@gmail.com |
+| Vikas Ramesh | [26155135] | [Vikasgowda13](https://github.com/Vikasgowda13) | vikasgowda1999@gmail.com |
 
 This document tracks file-level ownership and major responsibilities for the SpendWise group assignment. Both members reviewed each other's code, but the primary author of each file is listed below.
 
