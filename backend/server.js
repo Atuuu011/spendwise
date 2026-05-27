@@ -20,9 +20,31 @@ connectDB();
 const app = express();
 
 // CORS - allow frontend to call this API
+// Accepts: localhost (dev), CLIENT_URL from env, and any spendwise-*.vercel.app subdomain
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:5174',
+  process.env.CLIENT_URL,
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL?.split(',') || 'http://localhost:5173',
+    origin: function (origin, callback) {
+      // Allow requests with no origin (Postman, curl, mobile apps, server-to-server)
+      if (!origin) return callback(null, true);
+
+      // Allow exact matches from allowedOrigins
+      if (allowedOrigins.includes(origin)) return callback(null, true);
+
+      // Allow any *.vercel.app URL that starts with "spendwise" (covers all preview deploys)
+      if (/^https:\/\/spendwise[\w-]*\.vercel\.app$/.test(origin)) {
+        return callback(null, true);
+      }
+
+      // Block everything else
+      console.warn(`CORS blocked origin: ${origin}`);
+      return callback(new Error(`Not allowed by CORS: ${origin}`));
+    },
     credentials: true,
   })
 );
