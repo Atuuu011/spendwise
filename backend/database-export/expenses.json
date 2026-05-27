@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "6a1669f0ddcd17b11543f051",
+    "user": "6a165c0dddcd17b11543f02a",
+    "title": "lunch at cafe",
+    "amount": 50,
+    "category": "Food",
+    "description": "",
+    "date": "2026-05-27T00:00:00.000Z",
+    "createdAt": "2026-05-27T03:50:08.619Z",
+    "updatedAt": "2026-05-27T03:50:08.619Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16c2f016a6edc2f0fac48b",
+    "user": "6a165c0dddcd17b11543f02a",
+    "title": "fuel",
+    "amount": 60,
+    "category": "Travel",
+    "description": "car fuel",
+    "date": "2026-05-22T00:00:00.000Z",
+    "createdAt": "2026-05-27T10:09:52.603Z",
+    "updatedAt": "2026-05-27T10:09:52.603Z",
+    "__v": 0
+  }
+]

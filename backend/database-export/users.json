@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "6a165c0dddcd17b11543f02a",
+    "name": "Test User",
+    "email": "test@test.com",
+    "role": "user",
+    "createdAt": "2026-05-27T02:50:53.336Z",
+    "updatedAt": "2026-05-27T02:50:53.336Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a168aec6a54810a67932957",
+    "name": "atharva Shejwal",
+    "email": "atharva.live@spendwise.com",
+    "role": "user",
+    "createdAt": "2026-05-27T06:10:52.137Z",
+    "updatedAt": "2026-05-27T06:10:52.137Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a1693b06a54810a67932971",
+    "name": "Vikas",
+    "email": "vikasgowda1999@gmail.com",
+    "role": "user",
+    "createdAt": "2026-05-27T06:48:16.741Z",
+    "updatedAt": "2026-05-27T06:48:16.741Z",
+    "__v": 0
+  }
+]

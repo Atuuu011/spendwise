@@ -1,0 +1,202 @@
+[
+  {
+    "_id": "6a165c0dddcd17b11543f02c",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "REGISTER",
+    "details": "New account created",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T02:50:53.463Z",
+    "updatedAt": "2026-05-27T02:50:53.463Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a165c60ddcd17b11543f02f",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGIN",
+    "details": "User logged in",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T02:52:16.620Z",
+    "updatedAt": "2026-05-27T02:52:16.620Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a1665fcddcd17b11543f032",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGIN",
+    "details": "User logged in",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T03:33:16.577Z",
+    "updatedAt": "2026-05-27T03:33:16.577Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16663cddcd17b11543f036",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGIN",
+    "details": "User logged in",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T03:34:20.044Z",
+    "updatedAt": "2026-05-27T03:34:20.044Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a1669f0ddcd17b11543f053",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "CREATE_EXPENSE",
+    "details": "Created \"lunch at cafe\" ($50)",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T03:50:08.643Z",
+    "updatedAt": "2026-05-27T03:50:08.643Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a166a00ddcd17b11543f05a",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "CREATE_EXPENSE",
+    "details": "Created \"movie\" ($20)",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T03:50:24.610Z",
+    "updatedAt": "2026-05-27T03:50:24.610Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a166a0fddcd17b11543f061",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "CREATE_EXPENSE",
+    "details": "Created \"wifi bill\" ($113)",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T03:50:39.156Z",
+    "updatedAt": "2026-05-27T03:50:39.156Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a166a66ddcd17b11543f074",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "UPDATE_EXPENSE",
+    "details": "Updated \"wifi bill\"",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T03:52:06.564Z",
+    "updatedAt": "2026-05-27T03:52:06.564Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a166a6cddcd17b11543f07b",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "DELETE_EXPENSE",
+    "details": "Deleted \"movie\"",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T03:52:12.225Z",
+    "updatedAt": "2026-05-27T03:52:12.225Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a168aec6a54810a67932959",
+    "user": "6a168aec6a54810a67932957",
+    "action": "REGISTER",
+    "details": "New account created",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T06:10:52.571Z",
+    "updatedAt": "2026-05-27T06:10:52.571Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a168b3b6a54810a67932962",
+    "user": "6a168aec6a54810a67932957",
+    "action": "LOGOUT",
+    "details": "User logged out",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T06:12:11.239Z",
+    "updatedAt": "2026-05-27T06:12:11.239Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a168b446a54810a67932965",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGIN",
+    "details": "User logged in",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T06:12:20.064Z",
+    "updatedAt": "2026-05-27T06:12:20.064Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a168b4d6a54810a6793296e",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGOUT",
+    "details": "User logged out",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T06:12:29.113Z",
+    "updatedAt": "2026-05-27T06:12:29.113Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a1693b16a54810a67932973",
+    "user": "6a1693b06a54810a67932971",
+    "action": "REGISTER",
+    "details": "New account created",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T06:48:17.072Z",
+    "updatedAt": "2026-05-27T06:48:17.072Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16bb1f16a6edc2f0fac453",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGIN",
+    "details": "User logged in",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T09:36:31.490Z",
+    "updatedAt": "2026-05-27T09:36:31.490Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16c10116a6edc2f0fac46e",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGOUT",
+    "details": "User logged out",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T10:01:37.475Z",
+    "updatedAt": "2026-05-27T10:01:37.475Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16c11116a6edc2f0fac471",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGIN",
+    "details": "User logged in",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T10:01:53.781Z",
+    "updatedAt": "2026-05-27T10:01:53.781Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16c2d816a6edc2f0fac486",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "DELETE_EXPENSE",
+    "details": "Deleted \"wifi bill\"",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T10:09:28.671Z",
+    "updatedAt": "2026-05-27T10:09:28.671Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16c2f016a6edc2f0fac48d",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "CREATE_EXPENSE",
+    "details": "Created \"fuel\" ($60)",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T10:09:52.654Z",
+    "updatedAt": "2026-05-27T10:09:52.654Z",
+    "__v": 0
+  },
+  {
+    "_id": "6a16c2f66a54810a6793297d",
+    "user": "6a165c0dddcd17b11543f02a",
+    "action": "LOGIN",
+    "details": "User logged in",
+    "ipAddress": "::1",
+    "createdAt": "2026-05-27T10:09:58.464Z",
+    "updatedAt": "2026-05-27T10:09:58.464Z",
+    "__v": 0
+  }
+]
